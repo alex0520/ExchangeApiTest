@@ -76,7 +76,7 @@ public class ExchangeCurrency {
 
     @Then("^s?he should receive ([0-9\\.]+) as the exchanged value$")
     public void heShouldReceiveTheExchangeRate(Double exchangeValue) throws Exception {
-        assertThat(response.getValue()).isNull();
+        assertThat(response.getValue()).isNotNull();
         assertThat(response.getValue()).isEqualTo(exchangeValue);
     }
 
